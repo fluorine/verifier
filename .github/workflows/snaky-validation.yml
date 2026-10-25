@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-          ref: 70a07664b8387de861a0f3a20997e44ec96253a1
+          ref: statement-snaky-move-bound
       - name: Install pinned elan
         shell: bash
         run: |
@@ -26,4 +26,6 @@ jobs:
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
       - name: Source controls and Lean kernel checks
         run: python3 auto-research/lean-statements/2026-10-25-fluorine-snaky-move-bound/verify.py --lean
+
+
 
